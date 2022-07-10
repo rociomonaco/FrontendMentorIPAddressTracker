@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+        integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
+    <script src="https://kit.fontawesome.com/0aa6304a5a.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,900&family=Open+Sans:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <title>IP adress</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>IP Adress Tracker</h1>
+            <!-- search semanticamente es form pero tranquilamente se puede hacer con div-->
+            <form>
+                <input type="text" value="" name="tb_search" id="tb_search">
+                <button id="btn_search"><i class="fa-solid fa-angle-right"></i></button>
+            </form>
+            <!-- search -->
+        </header>
+        <section  class="contenedor-resultadoBusqueda">
+            <div class="contenedor-resultadoBusquedaOk" id="resultadoBusquedaOk">
+                <div>
+                    <h2>Ip adress</h2>
+                    <p id="search_ip"></p>
+                </div>
+                <div>
+                    <h2>Location</h2>
+                    <p id="search_location"></p>
+                </div>
+                <div>
+                    <h2>Timezone</h2>
+                    <p id="search_timezone"></p>
+                </div>
+                <div>
+                    <h2>Isp</h2>
+                    <p id="search_isp"></p>
+                </div>
+            </div>
+            <div id="resultadoBusquedaError">
+                <h2>La búsqueda no se pudo realizar, valor de IP inexistente.</h2>
+            </div>
+        </section>
+
+        <section>
+
+            <div id="map"></div>
+       
+        </section>
+    </main>
+    <script src="js/funciones.js"></script>
+</body>
+</html>
